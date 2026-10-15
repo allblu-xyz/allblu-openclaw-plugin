@@ -2,6 +2,15 @@
   "name": "openclaw-plugin-allblu-crypto-swap-quotes",
   "version": "0.1.0",
   "description": "Read-only allblu cryptocurrency swap quotes and supported assets for OpenClaw.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allblu-xyz/allblu-openclaw-plugin.git"
+  },
+  "homepage": "https://github.com/allblu-xyz/allblu-openclaw-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/allblu-xyz/allblu-openclaw-plugin/issues"
+  },
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
