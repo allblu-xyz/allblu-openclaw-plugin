@@ -2,7 +2,15 @@
 
 A minimal, read-only OpenClaw tool plugin for retrieving estimated cross-chain cryptocurrency swap quotes from [allblu](https://www.allblu.xyz).
 
-This repository is an implementation preview. The plugin has completed local build and validation, but should not be considered production-ready.
+## Installation
+
+Requires OpenClaw 2026.10.3 or later. Install the tested npm distribution:
+
+```bash
+openclaw plugins install npm:openclaw-plugin-allblu-crypto-swap-quotes@0.1.1 --force --accept-capabilities
+```
+
+The plugin is read-only, requires no API keys, and does not connect to a wallet. It provides exactly two tools: `allblu_get_quote` and `allblu_list_assets`.
 
 ## Tools
 
@@ -41,26 +49,17 @@ This plugin only reads from allblu's public quote and supported-assets APIs. It 
 
 All transactions take place on [allblu.xyz](https://www.allblu.xyz).
 
-## Installation
-
-Directly from GitHub:
-
-```bash
-openclaw plugins install git:github.com/allblu-xyz/allblu-openclaw-plugin
-openclaw plugins inspect allblu-crypto-swap-quotes --runtime --json
-```
+## Development
 
 For local linked development:
 
 ```bash
-openclaw plugins install -l ./allblu-openclaw-plugin
+openclaw plugins install --link ./allblu-openclaw-plugin --force --accept-capabilities
 ```
 
-The repository must be built and validated before either installation path is used.
+The repository must be built and validated before linking it locally.
 
-## Build and validation
-
-After dependencies are installed in a later approved phase:
+Build and validate with the project scripts:
 
 ```bash
 npm run plugin:build
