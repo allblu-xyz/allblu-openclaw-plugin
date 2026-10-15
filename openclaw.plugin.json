@@ -1,0 +1,20 @@
+{
+  "id": "allblu-crypto-swap-quotes",
+  "name": "allblu Crypto Swap Quotes",
+  "description": "Read-only cryptocurrency swap quotes and supported assets from allblu.",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": [
+      "allblu_get_quote",
+      "allblu_list_assets"
+    ]
+  }
+}
